@@ -1,0 +1,84 @@
+<html>
+<head>
+
+	<title>AKM Home</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
+
+	<link rel="stylesheet" href="Leaflet/leaflet.css">
+	<link rel="stylesheet" href="styles.css">
+	<link rel="stylesheet" href="Leaflet.markercluster-1.4.1\dist\MarkerCluster.Default.css">
+	<link rel="stylesheet" href="Leaflet.markercluster-1.4.1\dist\MarkerCluster.css">
+	<link rel="stylesheet" href="main.css" />
+
+		<script src="Leaflet/leaflet.js"></script>
+		<script src="jquery-3.4.1.min.js"></script>
+		<script src= "Leaflet.MakiMarkers-master/Leaflet.MakiMarkers.js"></script>
+		<script src= "Leaflet.markercluster-1.4.1\dist\leaflet.markercluster.js"></script>
+
+</head>
+<body>
+	<h1> Parks in Elementary School Catchments</h1>
+	<p> Parents look at many factors when buying a house and safe place to play outside of school grounds is an important factor in any neighborhood. This effects which school districts are most desiable for students. By examining the number of parks in each elementay school catchment zones it is possible to examine the dispartities between neighborhoods.</p>
+	<p> Darker green areas indicate a higher density of parks, however map does not account for park area.</p>
+
+	 <div id="mapid"></div>
+
+	 <script>
+	 	var mymap = L.map('mapid').setView([47.620, -122.332], 12);
+		//Load tile layer
+		L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
+			attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA, </a><a href = "https://data.seattle.gov/">Seattle Parks, </a><a href = "https://www.seattleschools.org/departments/enrollment_planning/enrollment_data/maps"> Seattle Public Schools</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a> Plug-Ins:<a href = "https://github.com/jseppi/Leaflet.MakiMarkers">Icons, </a><a href ="https://github.com/Leaflet/Leaflet.markercluster"> Clustering</a>',
+			maxZoom: 20,
+			id: 'mapbox.streets',
+			accessToken: 'pk.eyJ1IjoiYWluc2xleWttIiwiYSI6ImNrMmt1cDhnaTAwZDgzY2xrcW1zamIxNGgifQ.-0f1V1moN7hnx8mzPD7hxQ'
+		}).addTo(mymap);
+
+
+// //Mapbox accesscode for Makimarkers
+		L.MakiMarkers.accessToken = 'pk.eyJ1IjoiYWluc2xleWttIiwiYSI6ImNrMmt1cDhnaTAwZDgzY2xrcW1zamIxNGgifQ.-0f1V1moN7hnx8mzPD7hxQ';
+
+//Add layers to map
+	  $.getJSON("SeattleParks.geojson",function(data){
+			var tree = L.MakiMarkers.icon({
+			  icon: "park",
+			  color: "#31802C",
+		  	size: "m"
+		});
+
+	   var parks = L.geoJson(data,{
+		   pointToLayer: function(feature,latlng){
+			   var marker = L.marker(latlng,{icon: tree});
+			   marker.bindPopup(feature.properties.SITENAME);
+			return marker;}
+	 });
+
+	  var clusters = L.markerClusterGroup();
+	    clusters.addLayer(parks);
+	  mymap.addLayer(clusters);
+  });
+
+   $.getJSON("SchoolColor.geojson",function(data){
+     L.geoJson(data, {
+			  	style: function(feature){
+        var fillColor,
+            density = feature.properties.Join_Count;
+        if ( density > 21 ) fillColor = "#006837";
+        else if ( density > 11 ) fillColor = "#31a354";
+        else if ( density > 7 ) fillColor = "#78c679";
+        else if ( density > 4 ) fillColor = "#c2e699";
+        else if ( density > -1 ) fillColor = "#ffffcc";
+        else fillColor = "black";  // no data
+        return { color: "#999", weight: 1, fillColor:fillColor , fillOpacity: .7 };
+      },
+
+				onEachFeature: function (feature,layer){
+				  layer.bindPopup('<b>' + feature.properties.ES_ZONE + " Elementary School " + '</b>' + '<br/>' + "Number of Parks: " + feature.properties.Join_Count)
+				}
+				}).addTo(mymap);
+          });
+
+  </script>
+</body>
+</html>
