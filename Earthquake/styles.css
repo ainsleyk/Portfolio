@@ -1,0 +1,75 @@
+#map {
+  height: 70%;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  border: solid;
+  border-color: white;
+
+}
+
+#map2 {
+  height: 70%;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  border: solid;
+}
+
+  .mapboxgl-popup-content {
+    color: #010d0e;
+    background-color: #A67222;
+    font: 400 15px/22px;
+    font-family: 'Asap', sans-serif;
+    padding: 5;
+    width: 170px;
+    border: solid;
+    border-color: #010d0e;
+
+  }
+
+/* https://stackoverflow.com/questions/50786797/style-popups-differently-depending-on-the-clicked-layer-using-mapbox-gl-js */
+  .popupbikes .mapboxgl-popup-content {
+    color: #000000;
+    background-color: #DCE6E6;
+    padding: 5;
+    width: 200px;
+    border: solid;
+    border-color: #000000;
+    border-width: thin;
+    font-family: 'Asap', sans-serif;
+  }
+
+h1 {
+  font-family: 'Georgia', serif;
+  font-size: 4em;
+  text-align: center;
+}
+
+h3
+{
+  font-family: 'Asap', sans-serif;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+h4{
+    font-family: 'Asap', sans-serif;
+    font-size: 1.3em;
+    text-align: center;
+}
+
+p{
+  font-family: 'Asap', sans-serif;
+  text-align: center;
+  font-size: 1.15em;
+}
+
+a{
+  color:#CA8AFF;
+}
+
+body{
+  background-color: #000000;
+  color:#FFFFFF;
+}

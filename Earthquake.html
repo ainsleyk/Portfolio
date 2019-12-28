@@ -6,28 +6,40 @@
 -->
 <html>
 <head>
-	<title>AKM Parks & Schools</title>
+	<title>AKM Earthquakes</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 
 	<!-- for map -->
-	<link rel="stylesheet" href="ParksSchools\Leaflet\leaflet.css" />
+  <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.5.0/mapbox-gl.css' rel='stylesheet' />
 	<style>
-			#mapid { height: 80vh;
-						color: #000000
-			}
+				#map {
+					height: 75vh;
+					width: 100%;
+					margin-left: auto;
+					margin-right: auto;
+					border: solid;
+					border-color: white;}
+
+			.mapboxgl-popup-content {
+					color: #010d0e;
+					background-color:#043136;
+					font: 400 15px/22px;
+					padding: 5;
+					width: 170px;
+					border: solid;
+					border-color: #A67222;
+
+}
 	</style>
-	<link rel="stylesheet" href="ParksSchools\Leaflet.markercluster-1.4.1\dist\MarkerCluster.Default.css">
-	<link rel="stylesheet" href="ParksSchools\Leaflet.markercluster-1.4.1\dist\MarkerCluster.css">
-
-	<script src= "ParksSchools\Leaflet\leaflet.js"></script>
-	<script src= "ParksSchools\jquery-3.4.1.min.js"></script>
-	<script src= "ParksSchools\Leaflet.MakiMarkers-master\Leaflet.MakiMarkers.js"></script>
-	<script src= "ParksSchools\leaflet.markercluster.js"></script>
-
 
 	<!-- for page -->
 	<link rel="stylesheet" href="assets\css\main.css" />
+
+	<!-- formap -->
+	<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.5.0/mapbox-gl.js'></script>
+	<script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.0.2/mapbox-gl-directions.js'></script>
+
 
 
 </head>
@@ -52,19 +64,18 @@
 							<!-- Content -->
 								<section>
 									<header class="main">
-										<h1>School Catchment Greenery</h1>
+										<h1>Earthquakes</h1>
 									</header>
 
-									<span class="image main"><img src="images\Parks.JPG" alt="view of lake through trees" /></span>
+									<span class="image main"><img src="images\earthquake.JPG" alt="view of lake through trees" /></span>
 
-									<p> Parents look at many factors when buying a house and safe place to play outside of school grounds is an important factor in any neighborhood. This effect which school districts are most desirable for students. By examining the number of parks in each elementary school catchment zones it is possible to examine the disparities between neighborhoods.</p>
-									<p> Darker green areas indicate a higher number of parks, however map does not account for park area.</p>
+									<p>Earthquake data from the <a href= "https://earthquake.usgs.gov/"> USGS</a> was styled using Mapbox’s heat map feature, displaying live data of all earthquakes over a magnitude of 2.5 for the past month. This typically will highlight the <i>Ring of Fire</i> around the Pacific Ocean as we are areas in central North America, the Caribbean and in the Himalayas. However, as the data is updated daily these locations might change. Zooming in to each earthquake locations provides the opportunity to click to discover more details about each event.</p>
 								</section>
 
 
 
-		 								<div id="mapid"></div>
-										<script src= "ParksSchools\park.schools.js"></script>
+		 								<div id="map"></div>
+										<script src= "Earthquake\earthquake.js"></script>
 									</div>
 								</div>
 
@@ -81,7 +92,7 @@
 									<ul>
 										<li><a href="index.html">Homepage</a></li>
 										<li><a href="CertCapstone.html">Capstone Research</a></li>
-										<li><a href="CertProjects.html">Undergrauate Work</a></li>
+										<li><a href="CertProjects.html">Undergrauate Analyses</a></li>
 										<li>
 											<span class="opener">Web Cartography</span>
 												<ul>
@@ -93,29 +104,6 @@
 									</ul>
 								</nav>
 
-							<!-- Section
-								<section>
-									<header class="major">
-										<h2>Ante interdum</h2>
-									</header>
-									<div class="mini-posts">
-										<article>
-											<a href="#" class="image"><img src="images/pic07.jpg" alt="" /></a>
-											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
-										</article>
-										<article>
-											<a href="#" class="image"><img src="images/pic08.jpg" alt="" /></a>
-											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
-										</article>
-										<article>
-											<a href="#" class="image"><img src="images/pic09.jpg" alt="" /></a>
-											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
-										</article>
-									</div>
-									<ul class="actions">
-										<li><a href="#" class="button">More</a></li>
-									</ul>
-								</section> -->
 
 								<!-- Section -->
 									<section>

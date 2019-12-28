@@ -1,5 +1,5 @@
 
-		 	var mymap = L.map('mapid').setView([47.620, -122.332], 12);
+		 	var mymap = L.map('mapid').setView([47.637382, -122.289436], 12);
 			//Load tile layer
 			L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
 				attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA, </a><a href = "https://data.seattle.gov/">Seattle Parks, </a><a href = "https://www.seattleschools.org/departments/enrollment_planning/enrollment_data/maps"> Seattle Public Schools</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a> Plug-Ins:<a href = "https://github.com/jseppi/Leaflet.MakiMarkers">Icons, </a><a href ="https://github.com/Leaflet/Leaflet.markercluster"> Clustering</a>',
@@ -47,7 +47,7 @@
 	      },
 
 					onEachFeature: function (feature,layer){
-					  layer.bindPopup('<b>' + feature.properties.ES_ZONE + " Elementary School " + '</b>' + '<br/>' + "Number of Parks: " + feature.properties.Join_Count)
+					  layer.bindPopup(feature.properties.ES_ZONE + " Elementary School " + '<br/>' + "Number of Parks: " + feature.properties.Join_Count)
 					}
 					}).addTo(mymap);
 	          });

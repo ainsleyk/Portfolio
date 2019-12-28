@@ -116,17 +116,17 @@ input, select, textarea {
 /* Type */
 
 	body, input, select, textarea {
-		color: #919BA3;
+		color: #ACB9C2;
 		font-family: "Open Sans", sans-serif;
-		font-size: 13pt;
-		font-weight: 400;
+		font-size: 14pt;
+		font-weight: 500;
 		line-height: 1.65;
 	}
 
 		@media screen and (max-width: 1680px) {
 
 			body, input, select, textarea {
-				font-size: 11pt;
+				font-size: 12pt;
 			}
 
 		}
@@ -134,7 +134,7 @@ input, select, textarea {
 		@media screen and (max-width: 1280px) {
 
 			body, input, select, textarea {
-				font-size: 10pt;
+				font-size: 14pt;
 			}
 
 		}
@@ -2113,7 +2113,7 @@ input, select, textarea {
 		.image.main {
 			display: block;
 			margin: 0 0 3em 0;
-			width: 65%;
+			width: 75%;
 			margin-left: auto;
 			margin-right: auto;
 		}
@@ -3522,7 +3522,7 @@ input, select, textarea {
 
 		#menu ul a, #menu ul span {
 			border-bottom: 0;
-			color: inherit;
+			color: #ffffff;
 			cursor: pointer;
 			display: block;
 			font-size: 0.9em;
