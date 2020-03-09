@@ -74,6 +74,14 @@
 					 font-size: .95em;
 					 color: #d3d3d3
 				}
+				.wrapper {
+					  max-width: 800px;
+					  margin: 50px auto;
+					}
+
+					canvas {
+					  margin-bottom: 20px;
+					}
 	</style>
 
 	<!-- for page -->
@@ -84,6 +92,8 @@
 	<script src="housing\leaflet.markercluster.js"></script>
 	<script src="housing\jquery-3.4.1.min.js"></script>
 	<script src="housing\leaflet-side-by-side.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+	<script src="housing\scriptscharts.js"></script>
 
 
 
@@ -140,7 +150,10 @@
 											<script src= "housing\scripts.js"></script><br>
 
 											  <p>The number of evictions for all reasons is higher in previously red lined areas. To account for the different number of HOLC areas in each grade an average was taken for each color grade. However not only do Red areas have the highest raw number of eviction notices at 2,044 since 2015, they also have one of the smaller number of areas assigned to them, at 17. The best grade, green, has 13 total areas and only 56 eviction notices since 2015. </p>
-											    <span class="image main"><img src='images\evictions.PNG' alt= 'evictions graph'></span>
+											    <!-- <span class="image main"><img src='images\evictions.PNG' alt= 'evictions graph'></span> -->
+													<div class="wrapper">
+      										<canvas id="notices" width="1600" height="900"></canvas>
+												</div>
 
 											<h3>Buyouts</h3>
 											  <p>Landlords can offer to buyout tenants from the lease, effectively an eviction notice. Buyouts speed up an eviction process, can prevent tenants from suing, and can restrict rights. Landlords often retaliate if tenants do not take buyouts. Often times those who take buyouts have to use the funds to relocate outside of the city leaving their home. <a href= https://medium.com/@tarintowers/on-selling-out-how-to-negotiate-a-tenant-buyout-in-san-francisco-7ec6c4a605db target _blank> Tenants do not have to accept the buyouts</a>, but that still does not stop long term displacements. </p>

@@ -136,3 +136,11 @@ ul {
   font-size: .95em;
   color: #d3d3d3
 }
+
+.wrapper {
+  max-width: 800px;
+  margin: 50px auto;
+}
+
+canvas {
+  margin-bottom: 20px;
