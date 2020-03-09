@@ -6,7 +6,7 @@
 -->
 <html>
 <head>
-	<title>AKM Earthquakes</title>
+	<title>AKM Housings</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 
@@ -92,8 +92,7 @@
 	<script src="housing\leaflet.markercluster.js"></script>
 	<script src="housing\jquery-3.4.1.min.js"></script>
 	<script src="housing\leaflet-side-by-side.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
-	<script src="housing\scriptscharts.js"></script>
+
 
 
 
@@ -152,7 +151,8 @@
 											  <p>The number of evictions for all reasons is higher in previously red lined areas. To account for the different number of HOLC areas in each grade an average was taken for each color grade. However not only do Red areas have the highest raw number of eviction notices at 2,044 since 2015, they also have one of the smaller number of areas assigned to them, at 17. The best grade, green, has 13 total areas and only 56 eviction notices since 2015. </p>
 											    <!-- <span class="image main"><img src='images\evictions.PNG' alt= 'evictions graph'></span> -->
 													<div class="wrapper">
-      										<canvas id="notices" width="1600" height="900"></canvas>
+      										<canvas id="notices" width="1200" height="600"></canvas>
+													<div id= 'footer'>Representing the percent of eviction notices per HOLC grade from 2015- 2018.</div>
 												</div>
 
 											<h3>Buyouts</h3>
@@ -163,10 +163,13 @@
 											<div id= 'map2'></div>
 											<script src= 'housing\scripts2.js'></script>
 											<br>
-											  <p> Darker red areas have a higher number of buyouts than ligher colored areas.</p>
+											  <div id= 'footer'> Darker red areas have a higher number of buyouts than ligher colored areas.</div>
 											  <p>From 2015-2019 the areas previously defined as ‘Green, Best’, have only had 16 buyouts out of the 1,192 total. On average previously ‘hazardous’ have had the highest number of buyouts buy a wide margin. This shows the persistent trend that neighborhoods formerly of color are being be repurposed to serve new communities that have an excess of wealth. Although buyouts may seem like a favorable solution, they only speak to the disregard for those communities. </p>
-													<span class="image main"> <img src='images\buyouts.PNG' alt='buyout chart'></span>
-
+													<!-- <span class="image main"> <img src='images\buyouts.PNG' alt='buyout chart'></span> -->
+													<div class="wrapper">
+												    <canvas id="buyouts" width="1200" height="600"></canvas>
+														<div id= 'footer'>Representing the percent of total buyouts per HOLC grade from 2015- 2018.</div>
+													</div>
 
 											  <p>The areas that have been hit hardest by gentrification are those previously ‘Red lined’ by the HOLC. People in these areas were denied many economic freedoms in the early 40s because of the government’s decision to segregate communities racially and financially. What we see is that those areas, because of a loss in generationally wealth, are unable to defend their communities from slumlords and big tech buy outs. This is a trend across the United States, <a href = 'https://www.washingtonpost.com/news/wonk/wp/2018/03/28/redlining-was-banned-50-years-ago-its-still-hurting-minorities-today/' target= '_blank'> residents are being forced out and displaced.</a> Or have seen the persistence of a continually underserved community. </p>
 
@@ -230,6 +233,8 @@
 			</div>
 
 		<!-- Scripts -->
+		  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+		  <script src="housing\scriptscharts.js"></script>
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/browser.min.js"></script>
 			<script src="assets/js/breakpoints.min.js"></script>
