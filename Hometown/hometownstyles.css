@@ -1,0 +1,14 @@
+#map{
+  height: 90%;
+}
+
+.led {
+  width: 7em;
+  height: 3.5em;
+  margin-top: 1px;
+  border: 2px solid #01553f;
+}
+
+#legimg {
+  width: 5em;
+  height: 3.5em;}

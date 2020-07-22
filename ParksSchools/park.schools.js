@@ -4,10 +4,16 @@
 			L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
 				attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA, </a><a href = "https://data.seattle.gov/">Seattle Parks, </a><a href = "https://www.seattleschools.org/departments/enrollment_planning/enrollment_data/maps"> Seattle Public Schools</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a> Plug-Ins:<a href = "https://github.com/jseppi/Leaflet.MakiMarkers">Icons, </a><a href ="https://github.com/Leaflet/Leaflet.markercluster"> Clustering</a>',
 				maxZoom: 20,
+				minZoom: 10,
 				id: 'mapbox.streets',
 				accessToken: 'pk.eyJ1IjoiYWluc2xleWttIiwiYSI6ImNrMmt1cDhnaTAwZDgzY2xrcW1zamIxNGgifQ.-0f1V1moN7hnx8mzPD7hxQ'
 			}).addTo(mymap);
 
+			mymap.bounds = [],
+			   mymap.setMaxBounds([
+			     [47.730, -122.333],
+			     [47.469, -122.225]
+			   ]);
 
 	// //Mapbox accesscode for Makimarkers
 			L.MakiMarkers.accessToken = 'pk.eyJ1IjoiYWluc2xleWttIiwiYSI6ImNrMmt1cDhnaTAwZDgzY2xrcW1zamIxNGgifQ.-0f1V1moN7hnx8mzPD7hxQ';

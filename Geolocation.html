@@ -1,0 +1,235 @@
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+<head>
+	<title>AKM Parks & Schools</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
+	<!-- for geolocation -->
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+	 		integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+	 		crossorigin=""/>
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css" />
+	<!-- <link rel="stylesheet" href="Geolocation\Geo\geostyles.css"/> -->
+		   <link rel="stylesheet" href="Geolocation\Routing\leaflet-routing-machine.css" />
+		<style>
+	#map {
+		position: absolute;
+	height: 50%;
+	width: 50%;
+	}
+
+	#routemap {
+	   position: absolute;
+	   width: 50%;
+	   height: 50%;
+	}
+
+	.leaflet-control-layers-expanded {
+	  background: #989;
+	  font-size: 1.2em;
+	  font-weight: bold;
+	  border: 'solid'
+	}
+
+	.leaflet-popup-content-wrapper {
+	  background: #989;
+	  font-size: 1.2em;
+	  font-weight: bold;
+	  border: 'solid'
+	}
+
+	.ShowHide {
+	  overflow: visible;
+	  font-family: Arial, Helvetica, sans-serif;
+	  background-color: #FFDD20;
+	  color: #000000;
+	  padding:.5 em;
+	  font-size: .8em
+	}
+	#left {
+	  overflow: visible;
+	  text-align: center;
+	  height: auto;
+	}
+	#right {
+	  float: right;
+	  height: auto;
+	  text-align: center;
+	  font-size: 2.2em
+	}
+	.ShowHide a {
+	   color: #FFFFFF;
+	   text-decoration: none;
+	}
+</style>
+
+	<!-- for Routing -->
+	   <!-- routing machine -->
+
+	   <!-- geocoder -->
+	   <link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css" />
+
+	<!-- for geolocation -->
+	<script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+		 	integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+		 	crossorigin=""></script>
+	<script src= "Geolocation\Geo\easy-button.js"></script>
+	<script src= "Geolocation\Geo\suncalc.js"></script>
+
+	<!-- for Routing -->
+	<script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js" integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew==" crossorigin=""></script>
+    <script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"></script>
+    <!-- routing machine -->
+    <script src="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.js"></script>
+    <!-- geocoder -->
+    <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
+    <!-- easy button -->
+    <script src= "Geolocation\Routing\easy-button.js"></script>
+
+	<!-- for page -->
+	<link rel="stylesheet" href="assets\css\main.css" />
+</head>
+
+<body class="is-preload">
+
+	<!-- Wrapper -->
+		<div id="wrapper">
+
+			<!-- Main -->
+				<div id="main">
+					<div class="inner">
+
+
+						<!-- Header -->
+							<header id="header">
+								<a href="index.html" class="logo"><strong>Ainsley K McCullough</strong> Portfolio</a>
+								<ul class="icons">
+									<li><a href="https://twitter.com/MntRangeAins" target="_blank" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+									<li><a href="https://www.linkedin.com/in/ainsleykm/"  target="_blank" class="icon brands fa-linkedin"><span class="label">linkenin</span></a></li>
+								</ul>
+							</header>
+
+							<!-- Content -->
+								<section>
+									<header class="main">
+										<h1>School Catchment Greenery</h1>
+									</header>
+
+									<p> Parks are important gathering centers in the community providing youth a place to play and engage with nature. Some neighborhoods have more access to green spaces than others, a disparity that has wide reaching impacts. A choropleth a show the number of parks in each elementary school catchment area., with darker green indicating a higher number of parks. This map does not account for park or catchment area. Click icons for more information. </p>
+								</section>
+
+
+
+		 								<p><div id="map"></div>
+										<script src= "Geolocation\Geo\geoScript.js"></script></p>
+
+
+
+									<!-- <p><div class="ShowHide" id="Bar">
+								<div id="right">
+									<a href="#" onclick="Hide(Bar);"><b>X</b></a>
+								</div>
+								<div id="left">
+									<b>Routing an Adventure:</b>
+									On tap the option is giving to add a starting or ending location. You can add additional locations by dragging the route. Clicking <img src='pin.png' alt='location marker' style='width: 1em; height: 1em;'> will find you location for an faster start!
+									This page only pulls location when user request. Location data will not be stored or used for any other purpose. -->
+
+									<div id="routemap"></div>
+									<!-- </div>
+									</div> -->
+										<script src= "Geolocation\Routing\routeScripts.js"></script>
+
+
+
+		</div>
+	</div>
+</div></p>
+
+
+				<!-- Sidebar -->
+					<div id="sidebar">
+						<div class="inner">
+
+							<!-- Menu -->
+								<nav id="menu">
+									<header class="major">
+										<h2>Menu</h2>
+									</header>
+									<ul>
+										<li><a href="index.html">Homepage</a></li>
+										<li>
+											<span class="opener">Redlining Projects</span>
+												<ul>
+													<li><a href="HOLCTacoma.html">HOLC & Equality: Tacoma, WA</a></li>
+													<li><a href="housing.html">HOLC & Housing Security: San Francisco, CA </a></li>
+												</ul>
+												<li>
+													<span class="opener">Web Mapping</span>
+														<ul>
+															<li><a href="Parks-Schools.html">Parks & Schools: Seattle, WA</a></li>
+															<li><a href="Earthquake.html">Earthquakes</a></li>
+															<li><a href="Geolocation.html">Geolocation & Routing</a></li>
+														</ul>
+										<li><a href="CertProjects.html">Undergrauate Analyses</a></li>
+										<li>
+											<span class="opener">ESRI</span>
+												<ul>
+													<li><a href="FloodAnalysis.html">Floods: Carmel, IN & Pierce County, WA</a></li>
+													<li><a href="EducationOpportunity.html">Education Opportunity Index: King County, WA</a></li>
+													<li><a href="Storymaps.html">Story Maps</a></li>
+												</ul>
+										<li>
+											<span class="opener">LiDAR</span>
+												<ul>
+													<li><a href="CampusLidar.html">UW Campus Lidar: Tacoma, WA</a></li>
+													<li><a href="CanopyLidar.html">Urban Canopy Cover: Federal Way, WA</a></li>
+												</ul>
+										<li>
+											<span class="opener">Python</span>
+												<ul>
+													<li><a href="Airlines.html">Airline Sentiments</a></li>
+													<li><a href="FileEditing.html">CSV Editing</a></li>
+												</ul>
+										<li><a href="AMP.html">Action Mapping Project</a></li>
+										<li><a href="AboutMe.html">About Me</a></li>
+									</ul>
+								</nav>
+
+
+							<!-- Section -->
+								<section>
+									<header class="major">
+										<h2>Get in touch</h2>
+									</header>
+									<p>Reach out at anytime for more information about any projects shown here or potential opportunities. </p>
+									<ul class="contact">
+										<li class="icon solid fa-envelope"><a href="#">ainsleyk@uw.edu</a></li>
+										<li class="icon solid fa-phone">(317) 999-5013</li>
+									</ul>
+								</section>
+
+							<!-- Footer -->
+								<footer id="footer">
+									<p class="copyright">Photo Credit: Ainsley McCullough & Michael Zamora unless otherwise noted. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+								</footer>
+						</div>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+
+	</body>
+</html>
