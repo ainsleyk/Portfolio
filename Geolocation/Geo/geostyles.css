@@ -5,14 +5,15 @@ body {
 
 html, body,
 #map {
-height: 50%;
-width: 50%;
+  position: relative;
+  width: 50vh;
+  height: 50vh;
 }
 
 #routemap {
-   position: absolute;
-   width: 50%;
-   height: 50%;
+  position: relative;
+  width: 50vh;
+  height: 50vh;
 }
 
 .leaflet-control-layers-expanded {

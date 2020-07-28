@@ -15,20 +15,20 @@
 	 		integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
 	 		crossorigin=""/>
 	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css" />
-	<!-- <link rel="stylesheet" href="Geolocation\Geo\geostyles.css"/> -->
-		   <link rel="stylesheet" href="Geolocation\Routing\leaflet-routing-machine.css" />
+	<link rel="stylesheet" href="Geolocation\Geo\geostyles.css"/>
+		   <!-- <link rel="stylesheet" href="Geolocation\Routing\leaflet-routing-machine.css" /> -->
 		<style>
 	#map {
-		position: absolute;
-	height: 50%;
-	width: 50%;
+		position: relative;
+	height: 50vh;
+	width: 50vh;
 	}
 
-	#routemap {
-	   position: absolute;
-	   width: 50%;
-	   height: 50%;
-	}
+	/* #routemap {
+	   position: relative;
+	   width: 50vh;
+	   height: 50vh;
+	} */
 
 	.leaflet-control-layers-expanded {
 	  background: #989;
@@ -44,15 +44,15 @@
 	  border: 'solid'
 	}
 
-	.ShowHide {
+	/* .ShowHide {
 	  overflow: visible;
 	  font-family: Arial, Helvetica, sans-serif;
 	  background-color: #FFDD20;
 	  color: #000000;
 	  padding:.5 em;
 	  font-size: .8em
-	}
-	#left {
+	} */
+	/* #left {
 	  overflow: visible;
 	  text-align: center;
 	  height: auto;
@@ -62,11 +62,11 @@
 	  height: auto;
 	  text-align: center;
 	  font-size: 2.2em
-	}
-	.ShowHide a {
+	} */
+	/* .ShowHide a {
 	   color: #FFFFFF;
 	   text-decoration: none;
-	}
+	} */
 </style>
 
 	<!-- for Routing -->
@@ -84,13 +84,13 @@
 
 	<!-- for Routing -->
 	<script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js" integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew==" crossorigin=""></script>
-    <script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"></script>
-    <!-- routing machine -->
-    <script src="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.js"></script>
-    <!-- geocoder -->
-    <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
-    <!-- easy button -->
-    <script src= "Geolocation\Routing\easy-button.js"></script>
+  <script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"></script>
+  <!-- routing machine -->
+  <script src="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.js"></script>
+  <!-- geocoder -->
+  <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
+  <!-- easy button -->
+  <script src= "Geolocation\Routing\easy-button.js"></script>
 
 	<!-- for page -->
 	<link rel="stylesheet" href="assets\css\main.css" />
@@ -140,10 +140,8 @@
 									On tap the option is giving to add a starting or ending location. You can add additional locations by dragging the route. Clicking <img src='pin.png' alt='location marker' style='width: 1em; height: 1em;'> will find you location for an faster start!
 									This page only pulls location when user request. Location data will not be stored or used for any other purpose. -->
 
-									<div id="routemap"></div>
-									<!-- </div>
-									</div> -->
-										<script src= "Geolocation\Routing\routeScripts.js"></script>
+									<!-- <div id="routemap"></div>
+										<script src= "Geolocation\Routing\routeScripts.js"></script> -->
 
 
 

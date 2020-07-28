@@ -4,7 +4,7 @@
   margin-left: auto;
   margin-right: auto;
   border: solid;
-  border-color: white;
+  border-color: #145556;
 
 }
 
@@ -14,6 +14,7 @@
   margin-left: auto;
   margin-right: auto;
   border: solid;
+    border-color: #145556;
 }
 
 /* #map-container {
@@ -73,17 +74,15 @@ p{
   font-size: 1.15em;
 }
 
-a{
+/* a{
   color:#CA8AFF;
-}
+} */
 
-body{
-  background-color: #000000;
-  color:#FFFFFF;
+/* body{
   width: 70%;
   margin-left: auto;
   margin-right: auto;
-}
+} */
 
 .leaflet-control-layers-expanded {
   background: #999;

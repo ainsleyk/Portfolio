@@ -1,33 +1,59 @@
-var map2 = L.map('map2').setView([37.748, -122.433], 13);
+var holc = L.map('holc').setView([37.755509, -122.440651], 13);
 
-var redlineMap =  L.tileLayer('https://api.mapbox.com/styles/v1/ainsleykm/ck3yv1fvu0mb71cplzo6yuk1k/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiYWluc2xleWttIiwiYSI6ImNrMmt1cDhnaTAwZDgzY2xrcW1zamIxNGgifQ.-0f1V1moN7hnx8mzPD7hxQ', {
-    attribution: 'Map data &copy; <a href="https://www.mapbox.com/">Mapbox</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>',
-        minZoom: 12,
-  })
-  .addTo(map2);
+L.tileLayer('https://api.mapbox.com/styles/v1/ainsleykm/ckb15sz0j1evp1inz544l19m0/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiYWluc2xleWttIiwiYSI6ImNrMmt1cDhnaTAwZDgzY2xrcW1zamIxNGgifQ.-0f1V1moN7hnx8mzPD7hxQ', {
+  attribution: 'Map data &copy; <a href="https://www.mapbox.com/">Mapbox</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>',
+      minZoom: 12,
+    }).addTo(holc);
 
-  var buyoutMap =   L.tileLayer('https://api.mapbox.com/styles/v1/ainsleykm/ck3yv19ia0dcj1cnre206di6k/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiYWluc2xleWttIiwiYSI6ImNrMmt1cDhnaTAwZDgzY2xrcW1zamIxNGgifQ.-0f1V1moN7hnx8mzPD7hxQ', {
-      attribution: 'Map data &copy; <a href="https://www.mapbox.com/">Mapbox</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>',
-          minZoom: 12,
-    })
-    .addTo(map2);
-
-  $.getJSON("buyouts.geojson",function(data){
-    var buyouts =  L.geoJson(data,{
+  $.getJSON("housing/Json/TotalCountHexie.json",function(data){
+    var hex =  L.geoJson(data,{
           style: function(feature){
       var fillColor,
           grade = feature.properties.Join_Count;
-      if (grade > 35 ) fillColor = "#DC1C13";
-      else if ( grade > 18 ) fillColor = "#EA4C46";
-      else if ( grade > 8 ) fillColor = "#F07470";
-      else if ( grade > -1 ) fillColor = "#F6BDC0";
-      else fillColor = "black";  // no data
-      return { color: "#999", weight: 1, fillColor:fillColor, fillOpacity: 0 };
+      if (grade > 142) fillColor = "#27123D";
+      else if ( grade > 100 ) fillColor = "#3e1c61";
+      else if ( grade > 57 ) fillColor = "#6b31a8";
+      else if ( grade > 12 ) fillColor = "#8a42d6";
+      else if ( grade > 0 ) fillColor = "#a859ff";
+      else fillColor = "#5e5b53"; fillOpacity: .1;  // no data
+      return { color: "#0000", weight: 1, fillColor:fillColor, fillOpacity: .50};
     },
     onEachFeature: function (feature,layer){
-      layer.bindPopup( "Number of Buyouts: " +  feature.properties.Join_Count)
+      layer.bindPopup('<b>' + "Number of Eviction Notices: " + '</b>' +  feature.properties.Join_Count)
     }
-  }).addTo(map2);
+  }).addTo(sf);
   });
 
-  L.control.sideBySide(redlineMap, buyoutMap).addTo(map2);
+// var map2 = L.map('map2').setView([37.748, -122.433], 13);
+//
+// var redlineMap =  L.tileLayer('https://api.mapbox.com/styles/v1/ainsleykm/ck3yv1fvu0mb71cplzo6yuk1k/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiYWluc2xleWttIiwiYSI6ImNrMmt1cDhnaTAwZDgzY2xrcW1zamIxNGgifQ.-0f1V1moN7hnx8mzPD7hxQ', {
+//     attribution: 'Map data &copy; <a href="https://www.mapbox.com/">Mapbox</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>',
+//         minZoom: 12,
+//   })
+//   .addTo(map2);
+//
+//   var buyoutMap =   L.tileLayer('https://api.mapbox.com/styles/v1/ainsleykm/ck3yv19ia0dcj1cnre206di6k/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiYWluc2xleWttIiwiYSI6ImNrMmt1cDhnaTAwZDgzY2xrcW1zamIxNGgifQ.-0f1V1moN7hnx8mzPD7hxQ', {
+//       attribution: 'Map data &copy; <a href="https://www.mapbox.com/">Mapbox</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>',
+//           minZoom: 12,
+//     })
+//     .addTo(map2);
+//
+//   $.getJSON("buyouts.geojson",function(data){
+//     var buyouts =  L.geoJson(data,{
+//           style: function(feature){
+//       var fillColor,
+//           grade = feature.properties.Join_Count;
+//       if (grade > 35 ) fillColor = "#DC1C13";
+//       else if ( grade > 18 ) fillColor = "#EA4C46";
+//       else if ( grade > 8 ) fillColor = "#F07470";
+//       else if ( grade > -1 ) fillColor = "#F6BDC0";
+//       else fillColor = "black";  // no data
+//       return { color: "#999", weight: 1, fillColor:fillColor, fillOpacity: 0 };
+//     },
+//     onEachFeature: function (feature,layer){
+//       layer.bindPopup( "Number of Buyouts: " +  feature.properties.Join_Count)
+//     }
+//   }).addTo(map2);
+//   });
+//
+//   L.control.sideBySide(redlineMap, buyoutMap).addTo(map2);

@@ -52,7 +52,7 @@ var lineChart = new Chart(ctx, {
                        // {scaleLabel: {display:true, labelString: "Percent of Homes Served Notices", fontColor: "white"}}
                      ]
                 },
-         legend:{labels: {usePointStyle: true, fontColor: "white"}}
+         legend:{labels: {usePointStyle: true, fontColor: "black"}}
       }
     });
 

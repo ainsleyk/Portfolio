@@ -11,26 +11,26 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 
 	<!-- for map -->
-	<link href="housing\leaflet.css" rel="stylesheet" />
-	<link href="housing\MarkerCluster.css" rel="stylesheet" />
-  <link href="housing\MarkerCluster.Default.css" rel="stylesheet" />
+	<link href="Leaflet\leaflet.css" rel="stylesheet" />
+	<link href="Leaflet\MarkerCluster.css" rel="stylesheet" />
+  <link href="Leaflet\MarkerCluster.Default.css" rel="stylesheet" />
 		<style>
-					#map1 {
+					#sf {
 					  height: 75vh;
 					  width: 85%;
 					  margin-left: auto;
 					  margin-right: auto;
 					  border: solid;
-					  border-color: white;
-						color: #ffffff;
+						border-color: #145556;
 					}
 
-					#map2 {
+					#holc {
 					  height: 75vh;
 					  width: 85%;
 					  margin-left: auto;
 					  margin-right: auto;
-					  border: solid;
+						border: solid;
+					  border-color: #145556;
 					}
 
 			.leaflet-control-layers-expanded {
@@ -72,7 +72,8 @@
 				#footer{
 					 text-align: center;
 					 font-size: .95em;
-					 color: #d3d3d3
+					 color: #239596
+
 				}
 				.wrapper {
 					  max-width: 800px;
@@ -88,10 +89,10 @@
 	<link rel="stylesheet" href="assets\css\main.css" />
 
 	<!-- formap -->
-	<script src="housing\leaflet.js"></script>
-	<script src="housing\leaflet.markercluster.js"></script>
-	<script src="housing\jquery-3.4.1.min.js"></script>
-	<script src="housing\leaflet-side-by-side.js"></script>
+	<script src="Leaflet\leaflet.js"></script>
+	<script src="Leaflet\leaflet.markercluster.js"></script>
+	<script src="Leaflet\jquery-3.4.1.min.js"></script>
+	<script src="Leaflet\leaflet-side-by-side.js"></script>
 
 
 
@@ -144,9 +145,9 @@
 											          <div id= 'yellow'><li> Yellow: Definitely Declining </li></div>
 											          <div id= 'red'><li> Red: Hazardous </li></div>
 											        </p>
-															
+
 											<!-- Load Eviction Notices map container and script -->
-											<div id='map1'></div>
+											<div id='sf'></div>
 											<script src= "housing\scripts.js"></script><br>
 
 											  <p>The number of evictions for all reasons is higher in previously red lined areas. To account for the different number of HOLC areas in each grade an average was taken for each color grade. However not only do Red areas have the highest raw number of eviction notices at 2,044 since 2015, they also have one of the smaller number of areas assigned to them, at 17. The best grade, green, has 13 total areas and only 56 eviction notices since 2015. </p>
@@ -161,10 +162,10 @@
 
 
 											<!-- Load Buyout map container and script -->
-											<div id= 'map2'></div>
+											<div id= 'holc'></div>
 											<script src= 'housing\scripts2.js'></script>
 											<br>
-											  <div id= 'footer'> Darker red areas have a higher number of buyouts than ligher colored areas.</div>
+											  <div id= 'footer'> Darker red areas have a higher number of buyouts than ligher colored areas.</div></br>
 											  <p>From 2015-2019 the areas previously defined as ‘Green, Best’, have only had 16 buyouts out of the 1,192 total. On average previously ‘hazardous’ have had the highest number of buyouts buy a wide margin. This shows the persistent trend that neighborhoods formerly of color are being be repurposed to serve new communities that have an excess of wealth. Although buyouts may seem like a favorable solution, they only speak to the disregard for those communities. </p>
 													<!-- <span class="image main"> <img src='images\buyouts.PNG' alt='buyout chart'></span> -->
 													<div class="wrapper">
