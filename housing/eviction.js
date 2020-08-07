@@ -6,7 +6,7 @@ L.tileLayer('https://api.mapbox.com/styles/v1/ainsleykm/ckb15sz0j1evp1inz544l19m
 }).addTo(sf);
 
 
-  $.getJSON("housing/Json/A_HOLC_Count.json",function(data){
+  $.getJSON("housing/Json/B_HOLC_Count.json",function(data){
     var ablock =  L.geoJson(data,{
           style: function(feature){
       var fillColor,
@@ -23,7 +23,7 @@ L.tileLayer('https://api.mapbox.com/styles/v1/ainsleykm/ckb15sz0j1evp1inz544l19m
   }).addTo(holc);
   });
 
-  $.getJSON("housing/Json/B_HOLC_Count.json",function(data){
+  $.getJSON("housing/Json/A_HOLC_Count.json",function(data){
     var ablock =  L.geoJson(data,{
           style: function(feature){
       var fillColor,
