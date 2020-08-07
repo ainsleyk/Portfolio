@@ -15,7 +15,7 @@ L.tileLayer('https://api.mapbox.com/styles/v1/ainsleykm/ckb15sz0j1evp1inz544l19m
       else if ( grade > 507 ) fillColor = "#1959F7";
       else if ( grade > 0 ) fillColor = "#59A8FF"
       else fillColor = "white"; fillOpacity: .3;  // no data
-      return { color: "#5e5b53", weight: .5, fillColor:fillColor, fillOpacity: .50};
+      return { color: "#5e5b53", weight: .5, fillColor:fillColor, fillOpacity: .6};
     },
     onEachFeature: function (feature,layer){
       layer.bindPopup('<b>' + "HOLC Grade: " + '</b>' +  "Best" + '</br>' + '<b>' + "Number of Eviction Notices: " + '</b>' +  feature.properties.Join_Count)
@@ -32,7 +32,7 @@ L.tileLayer('https://api.mapbox.com/styles/v1/ainsleykm/ckb15sz0j1evp1inz544l19m
       else if ( grade > 507 ) fillColor = "#57F545";
       else if ( grade > 0 ) fillColor = "#8AF787";
       else fillColor = "white"; fillOpacity: .3;  // no data
-      return { color: "#5e5b53", weight: .5, fillColor:fillColor, fillOpacity: .50};
+      return { color: "#5e5b53", weight: .5, fillColor:fillColor, fillOpacity: .60};
     },
     onEachFeature: function (feature,layer){
       layer.bindPopup('<b>' + "HOLC Grade: " + '</b>' +  "Still Desirable" + '</br>' + '<b>' + "Number of Eviction Notices: " + '</b>' +  feature.properties.Join_Count)
@@ -49,7 +49,7 @@ L.tileLayer('https://api.mapbox.com/styles/v1/ainsleykm/ckb15sz0j1evp1inz544l19m
       else if ( grade > 507 ) fillColor = "#FFF552";
       else if ( grade > 0 ) fillColor = "#FFF787";
       else fillColor = "white"; fillOpacity: .3;  // no data
-      return { color: "#5e5b53", weight: .5, fillColor:fillColor, fillOpacity: .50};
+      return { color: "#5e5b53", weight: .5, fillColor:fillColor, fillOpacity: .60};
     },
     onEachFeature: function (feature,layer){
       layer.bindPopup('<b>' + "HOLC Grade: " + '</b>' +  "Declining" + '</br>' + '<b>' + "Number of Eviction Notices: " + '</b>' +  feature.properties.Join_Count)
@@ -66,7 +66,7 @@ L.tileLayer('https://api.mapbox.com/styles/v1/ainsleykm/ckb15sz0j1evp1inz544l19m
       else if ( grade > 507 ) {fillColor = "#FF4F4D";  fillOpacity: .5}
       else if ( grade > 0 ) {fillColor = "#FF9187";  fillOpacity: .3}
       else fillColor = "white"; fillOpacity: .3;  // no data
-      return { color: "#5e5b53", weight: .5, fillColor:fillColor, fillOpacity:.50};
+      return { color: "#5e5b53", weight: .5, fillColor:fillColor, fillOpacity:.60};
     },
     onEachFeature: function (feature,layer){
       layer.bindPopup('<b>' + "HOLC Grade: " + '</b>' +  "Hazardous" + '</br>' + '<b>' + "Number of Eviction Notices: " + '</b>' +  feature.properties.Join_Count)
