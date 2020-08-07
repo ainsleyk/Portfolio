@@ -12,8 +12,6 @@
 
 	<!-- for map -->
 	<link href="Leaflet\leaflet.css" rel="stylesheet" />
-	<link href="Leaflet\MarkerCluster.css" rel="stylesheet" />
-  <link href="Leaflet\MarkerCluster.Default.css" rel="stylesheet" />
 		<style>
 					#sf {
 					  height: 75vh;
@@ -31,6 +29,15 @@
 					  margin-right: auto;
 						border: solid;
 					  border-color: #145556;
+					}
+
+					#buyout {
+						height: 75vh;
+						width: 85%;
+						margin-left: auto;
+						margin-right: auto;
+						border: solid;
+						border-color: #145556;
 					}
 
 			.leaflet-control-layers-expanded {
@@ -139,16 +146,25 @@
 
 											  <h3>Eviction Notices</h3>
 											    <p>Removing residents from their homes can happen for several reasons, generally the most common is a lack of payment. However, the fault can be placed more on the structure of the housing authorities not defending long term residents in an area that is seeing a large influx of big money. As Phyllis Bowie explained signing a lease with Rent Control often not held. One of the main reasons for this in San Francisco is the Ellis Act. <a href= https://www.stimmel-law.com/en/articles/ellis-act-state-law-restricting-change-use-rental-property target= _blank> The Ellis Act </a> gives landlords the unconditional right to evict all tenants to “go out of business.” This is often used to change the use of the building, such as converting to condos. Leaving thousands out of housing. The Anti Eviction Mapping Project shows the number of <i>just</i> <a href= http://www.antievictionmappingproject.net/ellis.html target= _blank> Ellis Act evictions</a> since its implementation. HOLC Grades are as follows:
-											        <ul  style="list-style: inside;">
+									
 											          <div id= 'green'><li> Green: Best </li></div>
 											          <div id= 'blue'><li> Blue: Still Desirable </li></div>
 											          <div id= 'yellow'><li> Yellow: Definitely Declining </li></div>
 											          <div id= 'red'><li> Red: Hazardous </li></div>
-											        </p>
+															</ul>
+													The map below shows the the grade by color, with darker shades representing high numbers of eviction notices.
+											    </p>
 
 											<!-- Load Eviction Notices map container and script -->
 											<div id='sf'></div>
-											<script src= "housing\scripts.js"></script><br>
+											<script src= "housing\eviction.js"></script></br>
+
+											<p> Using a hex map of San Francisco shows the concentration of notices in Downtown and the Misson District. </br>
+											<img src="housing\images\hexleg.png" style="width: 20%; height 20%; margin-left: auto; margin-right: auto; display: block;">
+
+											<div id= 'holc'></div>
+											<script src= 'housing\hexeviction.js'></script>
+										</p>
 
 											  <p>The number of evictions for all reasons is higher in previously red lined areas. To account for the different number of HOLC areas in each grade an average was taken for each color grade. However not only do Red areas have the highest raw number of eviction notices at 2,044 since 2015, they also have one of the smaller number of areas assigned to them, at 17. The best grade, green, has 13 total areas and only 56 eviction notices since 2015. </p>
 											    <!-- <span class="image main"><img src='images\evictions.PNG' alt= 'evictions graph'></span> -->
@@ -162,8 +178,8 @@
 
 
 											<!-- Load Buyout map container and script -->
-											<div id= 'holc'></div>
-											<script src= 'housing\scripts2.js'></script>
+											<div id= 'buyout'></div>
+											<script src= 'housing\buyout.js'></script>
 											<br>
 											  <div id= 'footer'> Darker red areas have a higher number of buyouts than ligher colored areas.</div></br>
 											  <p>From 2015-2019 the areas previously defined as ‘Green, Best’, have only had 16 buyouts out of the 1,192 total. On average previously ‘hazardous’ have had the highest number of buyouts buy a wide margin. This shows the persistent trend that neighborhoods formerly of color are being be repurposed to serve new communities that have an excess of wealth. Although buyouts may seem like a favorable solution, they only speak to the disregard for those communities. </p>
