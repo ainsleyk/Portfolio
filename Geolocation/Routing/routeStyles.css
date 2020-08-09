@@ -1,12 +1,11 @@
-body {
-   padding: 0;
-   margin: 0;
-}
 
-#routemap {
-   position: absolute;
-   width: 100vw;
+#map {
+   position:relative;
+   width: 100vh;
    height: 100vh;
+   margin-left: auto;
+   margin-right: auto;
+
 }
 
 .ShowHide {
@@ -17,18 +16,9 @@ body {
   padding:.5 em;
   font-size: .8em
 }
-#left {
-  overflow: visible;
-  text-align: center;
-  height: auto;
-}
-#right {
-  float: right;
-  height: auto;
-  text-align: center;
-  font-size: 2.2em
-}
-.ShowHide a {
-   color: #FFFFFF;
-   text-decoration: none;
+
+
+.leaflet-popup-content-wrapper {
+  background-color: #DFDAF0;
+  width: auto !important;
 }

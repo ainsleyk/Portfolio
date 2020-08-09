@@ -6,96 +6,26 @@
 -->
 <html>
 <head>
-	<title>AKM Parks & Schools</title>
+	<title>AKM Simple Routing</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 
-	<!-- for geolocation -->
-	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
-	 		integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
-	 		crossorigin=""/>
-	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css" />
-	<link rel="stylesheet" href="Geolocation\Geo\geostyles.css"/>
-		   <!-- <link rel="stylesheet" href="Geolocation\Routing\leaflet-routing-machine.css" /> -->
-		<style>
-	#map {
-		position: relative;
-	height: 50vh;
-	width: 50vh;
-	}
+	<!-- for map -->
+<link rel="stylesheet" href="Leaflet\leaflet.css" />
+<link rel= "stylesheet" href="Geolocation\Routing\routeStyles.css"/>
+<link rel="stylesheet" href="assets\css\main.css" />
+<link rel="stylesheet" href="Geolocation\Routing\leaflet-routing-machine.css" />
 
-	/* #routemap {
-	   position: relative;
-	   width: 50vh;
-	   height: 50vh;
-	} */
+<link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css" />
 
-	.leaflet-control-layers-expanded {
-	  background: #989;
-	  font-size: 1.2em;
-	  font-weight: bold;
-	  border: 'solid'
-	}
+<script src="Leaflet\leaflet.js"></script>
+<script src="Geolocation\Geo\easy-button.js"></script>
+<script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
+<script src="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.js"></script>
 
-	.leaflet-popup-content-wrapper {
-	  background: #989;
-	  font-size: 1.2em;
-	  font-weight: bold;
-	  border: 'solid'
-	}
 
-	/* .ShowHide {
-	  overflow: visible;
-	  font-family: Arial, Helvetica, sans-serif;
-	  background-color: #FFDD20;
-	  color: #000000;
-	  padding:.5 em;
-	  font-size: .8em
-	} */
-	/* #left {
-	  overflow: visible;
-	  text-align: center;
-	  height: auto;
-	}
-	#right {
-	  float: right;
-	  height: auto;
-	  text-align: center;
-	  font-size: 2.2em
-	} */
-	/* .ShowHide a {
-	   color: #FFFFFF;
-	   text-decoration: none;
-	} */
-</style>
 
-	<!-- for Routing -->
-	   <!-- routing machine -->
-
-	   <!-- geocoder -->
-	   <link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css" />
-
-	<!-- for geolocation -->
-	<script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
-		 	integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
-		 	crossorigin=""></script>
-	<script src= "Geolocation\Geo\easy-button.js"></script>
-	<script src= "Geolocation\Geo\suncalc.js"></script>
-
-	<!-- for Routing -->
-	<script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js" integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew==" crossorigin=""></script>
-  <script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"></script>
-  <!-- routing machine -->
-  <script src="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.js"></script>
-  <!-- geocoder -->
-  <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
-  <!-- easy button -->
-  <script src= "Geolocation\Routing\easy-button.js"></script>
-
-	<!-- for page -->
-	<link rel="stylesheet" href="assets\css\main.css" />
 </head>
-
 <body class="is-preload">
 
 	<!-- Wrapper -->
@@ -104,7 +34,6 @@
 			<!-- Main -->
 				<div id="main">
 					<div class="inner">
-
 
 						<!-- Header -->
 							<header id="header">
@@ -118,36 +47,21 @@
 							<!-- Content -->
 								<section>
 									<header class="main">
-										<h1>School Catchment Greenery</h1>
+										<h1>Simple Leaflet Routing</h1>
 									</header>
 
-									<p> Parks are important gathering centers in the community providing youth a place to play and engage with nature. Some neighborhoods have more access to green spaces than others, a disparity that has wide reaching impacts. A choropleth a show the number of parks in each elementary school catchment area., with darker green indicating a higher number of parks. This map does not account for park or catchment area. Click icons for more information. </p>
-								</section>
+									<p>A simple Leaflet routing and geolocation example centered in Tacoma, WA. Use the marker in the upper right corner to zoom in on our genera location. Click anywhere on the map to add a start or end point to your route. You can add multiple stops to your route. This was built with <a href="https://www.liedman.net/leaflet-routing-machine/">Leaflet Routing Machine</a>.</p>
 
 
 
-		 								<p><div id="map"></div>
-										<script src= "Geolocation\Geo\geoScript.js"></script></p>
+		 							<div id="map"></div>
+									<script src="Geolocation\Routing\routeScripts.js"></script>
+									</br>
+								</br>
+							</section>
 
-
-
-									<!-- <p><div class="ShowHide" id="Bar">
-								<div id="right">
-									<a href="#" onclick="Hide(Bar);"><b>X</b></a>
+									</div>
 								</div>
-								<div id="left">
-									<b>Routing an Adventure:</b>
-									On tap the option is giving to add a starting or ending location. You can add additional locations by dragging the route. Clicking <img src='pin.png' alt='location marker' style='width: 1em; height: 1em;'> will find you location for an faster start!
-									This page only pulls location when user request. Location data will not be stored or used for any other purpose. -->
-
-									<!-- <div id="routemap"></div>
-										<script src= "Geolocation\Routing\routeScripts.js"></script> -->
-
-
-
-		</div>
-	</div>
-</div></p>
 
 
 				<!-- Sidebar -->
@@ -216,6 +130,7 @@
 								<footer id="footer">
 									<p class="copyright">Photo Credit: Ainsley McCullough & Michael Zamora unless otherwise noted. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
 								</footer>
+
 						</div>
 					</div>
 

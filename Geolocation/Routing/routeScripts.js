@@ -3,16 +3,16 @@ function Hide(HideID)
   HideID.style.display = "none";
 }
 
-var routemap = L.map('routemap').setView([47.25, -122.44], 11);
+var map = L.map('map').setView([47.25, -122.44], 11);
 
 L.tileLayer('https://api.mapbox.com/styles/v1/ainsleykm/ck3c6e5yq20pa1cphuqs9rqer/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiYWluc2xleWttIiwiYSI6ImNrMmt1cDhnaTAwZDgzY2xrcW1zamIxNGgifQ.-0f1V1moN7hnx8mzPD7hxQ', {
     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox,</a> Icons: <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik',
     maxZoom: 18
-}).addTo(routemap);
+}).addTo(map);
 
-L.easyButton('<img src="Geolocation/images/pin.png">', function(btn, routemap){
-    routemap.locate({setView: true, maxZoom: 16});;
-}).addTo(routemap);
+L.easyButton('<img src="Geolocation/images/pin.png">', function(btn, map){
+    map.locate({setView: true, maxZoom: 16});;
+}).addTo(map);
 
 
 var control = L.Routing.control({
@@ -29,7 +29,7 @@ var control = L.Routing.control({
     collapsible: true,
     show: false,
     reverseWaypoints: true
-}).addTo(routemap);
+}).addTo(map);
 
 
 function createButton(label, container) {
@@ -39,21 +39,21 @@ function createButton(label, container) {
     return btn;
 }
 
-routemap.on('click', function(e) {
+map.on('click', function(e) {
     var container = L.DomUtil.create('div'),
         startBtn = createButton('Starting Location', container),
         destBtn = createButton('Go to this location', container);
             L.DomEvent.on(startBtn, 'click', function() {
                 control.spliceWaypoints(0, 1, e.latlng);
-                routemap.closePopup();
+                map.closePopup();
               });
             L.DomEvent.on(destBtn, 'click', function() {
                   control.spliceWaypoints(control.getWaypoints().length - 1, 1, e.latlng);
                   control.show();
-                  routemap.closePopup();
+                  map.closePopup();
               });
-    L.popup()
+    L.popup( {maxWidth: 500})
         .setContent(container)
         .setLatLng(e.latlng)
-        .openOn(routemap);
+        .openOn(map);
  });

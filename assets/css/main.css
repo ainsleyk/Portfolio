@@ -212,6 +212,7 @@ input, select, textarea {
 
 	h4 {
 		font-size: 1.1em;
+		text-align: center;
 	}
 
 	h5 {
@@ -3499,6 +3500,7 @@ input, select, textarea {
 	#footer .copyright {
 		color: #F2E3D5;
 		font-size: 0.9em;
+		text-align: center;
 	}
 
 		#footer .copyright a {
