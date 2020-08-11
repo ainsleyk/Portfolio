@@ -5,7 +5,7 @@ L.tileLayer('https://api.mapbox.com/styles/v1/ainsleykm/ckb15sz0j1evp1inz544l19m
       minZoom: 12,
     }).addTo(holc);
 
-  $.getJSON("housing/amp_tool.geojson",function(data){
+  $.getJSON("housing/Json/TotalCountHexie.json",function(data){
     var hex =  L.geoJson(data,{
           style: function(feature){
       var fillColor,
