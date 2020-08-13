@@ -6,29 +6,10 @@
 -->
 <html>
 <head>
-	<title>AKM Parks & Schools</title>
+	<title>AKM Story Maps</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-
-	<!-- for map -->
-	<link rel="stylesheet" href="ParksSchools\Leaflet\leaflet.css" />
-	<style>
-			#mapid { height: 80vh;
-			}
-	</style>
-	<link rel="stylesheet" href="ParksSchools\Leaflet.markercluster-1.4.1\dist\MarkerCluster.Default.css">
-	<link rel="stylesheet" href="ParksSchools\Leaflet.markercluster-1.4.1\dist\MarkerCluster.css">
-
-	<script src= "ParksSchools\Leaflet\leaflet.js"></script>
-	<script src= "ParksSchools\jquery-3.4.1.min.js"></script>
-	<script src= "ParksSchools\Leaflet.MakiMarkers-master\Leaflet.MakiMarkers.js"></script>
-	<script src= "ParksSchools\leaflet.markercluster.js"></script>
-
-
-	<!-- for page -->
-	<link rel="stylesheet" href="assets\css\main.css" />
-
-
+	<link rel="stylesheet" href="assets/css/main.css" />
 </head>
 <body class="is-preload">
 
@@ -38,7 +19,6 @@
 			<!-- Main -->
 				<div id="main">
 					<div class="inner">
-
 
 						<!-- Header -->
 							<header id="header">
@@ -52,27 +32,28 @@
 							<!-- Content -->
 								<section>
 									<header class="main">
-										<h1>School Catchment Greenery</h1>
+										<h1>ESRI Story Maps</h1>
 									</header>
 
-									<p> Parks are important gathering centers in the community providing youth a place to play and engage with nature. Some neighborhoods have more access to green spaces than others, a disparity that has wide reaching impacts. A choropleth a show the number of parks in each elementary school catchment area., with darker green indicating a higher number of parks. This map does not account for park or catchment area. Click icons for more information. </p>
-								</section>
+									<span class="image main"><img src="images\mountRainer.jpg" alt="Mount Rainer" /></span>
 
+                  <h2>Environmental Literature Retreat Story Map</h2>
+                  <p> Created for a presentation about connections with the Environment, engaging with some themes from readings in an first year environmental literature class. This story map guides the viewer through my first trip to Mount Rainer. </p>
+                  <iframe width="95%" height="750" src="https://uwt-gis-geotech.maps.arcgis.com/apps/MapTour/index.html?appid=28a866072c82493f97fbfc4b4efab603"></iframe>
 
+									<h2>US Desert</h2>
+									<p>Highlighting Locatioin vistied by Anthony Bourdain and Joshua Homme in No Reservations eposide in the US Desert in 2011. A place very dear to my heart.</p>
+									<div class="iframe">
+											<iframe src="https://www.google.com/maps/d/u/1/embed?mid=1jNSQkd3cXMy2FL8nGCqFjJP_e7rGkSj0" width="100%" height="480"></iframe>
 
-		 								<div id="mapid"></div>
-										<script src= "ParksSchools\park.schools.js"></script>
-									</br>
-									</br>
-									</div>
-								</div>
-
+						</div>
+					</div>
 
 				<!-- Sidebar -->
 					<div id="sidebar">
 						<div class="inner">
 
-							<!-- Menu -->
+							!-- Menu -->
 								<nav id="menu">
 									<header class="major">
 										<h2>Menu</h2>
@@ -125,8 +106,7 @@
 									</header>
 									<p>Reach out at anytime for more information about any projects shown here or potential opportunities. </p>
 									<ul class="contact">
-										<li class="icon solid fa-envelope">ainsleyk@uw.edu</a></li>
-										<li class="icon solid fa-envelope">ainsleykm@gmail.com</a></li>
+										<li class="icon solid fa-envelope"><a href="#">ainsleyk@uw.edu</a></li>
 										<li class="icon solid fa-phone">(317) 999-5013</li>
 									</ul>
 								</section>
@@ -135,6 +115,7 @@
 								<footer id="footer">
 									<p class="copyright">Photo Credit: Ainsley McCullough & Michael Zamora unless otherwise noted. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
 								</footer>
+
 						</div>
 					</div>
 
@@ -146,7 +127,6 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-
 
 	</body>
 </html>
