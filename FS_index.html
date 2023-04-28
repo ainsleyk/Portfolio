@@ -29,13 +29,94 @@
 						width: 170px;
 						border: solid;
 						border-color: #A67222;
+					}
 
-	}
+				#sf {
+					height: 75vh;
+					width: 85%;
+					margin-left: auto;
+					margin-right: auto;
+					border: solid;
+					border-color: #145556;
+				}
+
+				#holc {
+					height: 75vh;
+					width: 85%;
+					margin-left: auto;
+					margin-right: auto;
+					border: solid;
+					border-color: #145556;
+				}
+
+				#buyout {
+					height: 75vh;
+					width: 85%;
+					margin-left: auto;
+					margin-right: auto;
+					border: solid;
+					border-color: #145556;
+				}
+
+		.leaflet-control-layers-expanded {
+					background: #000000;
+					font-size: 1.2em;
+					font-weight: bold;
+					border: 'solid';
+					border-color: #ffffff
+				}
+
+				.img{
+					float:right;
+				}
+
+			#green{
+				 color: green;
+				 text-align: center;
+				 font-weight: bold;
+				}
+
+			#blue{
+				 color: #3792cb;
+				 text-align: center;
+				 font-weight: bold;
+			}
+
+			#yellow{
+				 color: #FFD600;
+				 text-align: center;
+				 font-weight: bold;
+			}
+
+			#red{
+				 color: red;
+				 text-align: center;
+				 font-weight: bold;
+			}
+
+			#footer{
+				 text-align: center;
+				 font-size: .95em;
+				 color: #239596
+
+			}
+			.wrapper {
+					max-width: 800px;
+					margin: 50px auto;
+				}
+
+				canvas {
+					margin-bottom: 20px;
+				}
+
 		</style>
 
 		<!-- formap -->
 		<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.5.0/mapbox-gl.js'></script>
 		<script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.0.2/mapbox-gl-directions.js'></script>
+		<script src="Leaflet\leaflet.js"></script>
+		<script src="Leaflet\jquery-3.4.1.min.js"></script>
+		<script src="Leaflet\leaflet-side-by-side.js"></script>
 
 	</head>
 	<body class="is-preload">
@@ -114,7 +195,8 @@
 									</header>
 									<div class="posts">
 										<article>
-											<a href="FloodAnalysis.html" class="image"><img src="Floods/FloodCarmel.png" alt="Flood effected parcels in red of east side of Hamiltion County" /></a>
+											<div id= 'buyout'></div>
+											<script src= 'housing\buyout.js'></script>
 											<h3>FEMA Flood Risk: Carmel, IN</h3>
 											<p>Evaluating the population density and the location of residential parcels and schools against the flood plains, a few areas of concern can be identified. The 500-year, 100-year (or base year), and the floodways are identified. The remaining area classified as “minimal risk” for a flooding event. </p>
 											<ul class="actions">
@@ -133,7 +215,7 @@
 										</article>
 
 										<article>
-											<iframe src="https://uwt-gis-geotech.maps.arcgis.com/apps/webappviewer/index.html?id=85c97465b5b94fa6bcf2ac176ac61eee"  width="100%" height="300"></iframe>
+											<iframe src="https://uwt-gis-geotech.maps.arcgis.com/apps/webappviewer/index.html?id=85c97465b5b94fa6bcf2ac176ac61eee" title="South Sound Non-Profits" width="100%" height="300"></iframe>
 											<h3>Digital Data Collection Tools</h3>
 											<p> The Action Mapping Project centers youth voices. Moving in to a period heavy in virtual engagement I created a digital data collection tool for youth participating in the project. </p>
 											<ul class="actions">
