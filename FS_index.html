@@ -1,0 +1,169 @@
+ <!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>AKM Home</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!-- for map -->
+	  <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.5.0/mapbox-gl.css' rel='stylesheet' />
+		<style>
+					#map {
+						height: 75vh;
+						width: 100%;
+						margin-left: auto;
+						margin-right: auto;
+						border: solid;
+						border-color: white;}
+
+				.mapboxgl-popup-content {
+						color: #010d0e;
+						background-color:#043136;
+						font: 400 15px/22px;
+						padding: 5;
+						width: 170px;
+						border: solid;
+						border-color: #A67222;
+
+	}
+		</style>
+
+		<!-- formap -->
+		<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.5.0/mapbox-gl.js'></script>
+		<script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.0.2/mapbox-gl-directions.js'></script>
+
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+								<header id="header">
+									<a href="index.html" class="logo"><strong>Ainsley K McCullough</strong> Portfolio</a>
+									<ul class="icons">
+										<li><a href="https://www.linkedin.com/in/ainsleykm/"  target="_blank" class="icon brands fa-linkedin"><span class="label">linkenin</span></a></li>
+									</ul>
+								</header>
+
+							<!-- Banner -->
+								<section id="banner">
+									<div class="content">
+										<header>
+											<h1>Ainsley</h1>
+											<p>Something Clever</p>
+										</header>
+										<p>Probably unneccessary</br>
+										</p>
+										<ul class="actions">
+												<a href="AboutMe.html" class="button">About Me</a>
+										</ul>
+									</div>
+									<span class="image object">
+										<img src="images/DSC_0120.JPG" alt="Headshot" />
+									</span>
+								</section>
+
+							<!-- Section -->
+								<section>
+									<header class="major">
+										<h2>Highlights</h2>
+									</header>
+									<div class="features">
+										<article>
+											<span class="icon solid fa-graduation-cap fa-xs"></span>
+											<div class="content">
+												<h3>Education</h3>
+												<ul>
+												<li>M.S. Geospatial Technologies</li>
+												<li>B.A. Sustainability: Communications</li>
+												<li>GIS Certificate</li>
+												</ul>
+											</div>
+										</article>
+
+										<article>
+											<span class="icon solid fa-chart-bar fa-xs"></span>
+											<div class="content">
+												<h3>Technical Skills</h3>
+												<ul>
+												<li>Data Collection & Managment</li>
+												<li>Data Visualization & Presentation</li>
+												<li>Data Analysis</li>
+												<li>Web Mapping</li>
+												<li>Carbon Accounting</li>
+												</ul>
+											</div>
+										</article>
+								</section>
+
+
+							<!-- Section -->
+								<section>
+									<header class="major">
+										<h2>Selected Projects</h2>
+									</header>
+									<div class="posts">
+										<article>
+											<a href="FloodAnalysis.html" class="image"><img src="Floods/FloodCarmel.png" alt="Flood effected parcels in red of east side of Hamiltion County" /></a>
+											<h3>FEMA Flood Risk: Carmel, IN</h3>
+											<p>Evaluating the population density and the location of residential parcels and schools against the flood plains, a few areas of concern can be identified. The 500-year, 100-year (or base year), and the floodways are identified. The remaining area classified as “minimal risk” for a flooding event. </p>
+											<ul class="actions">
+												<li><a href="Floods/Floods_CarmelIN.pdf" class="button">More</a></li>
+											</ul>
+										</article>
+
+										<article>
+											<div id="map"></div>
+											<script src= "Earthquake\earthquake.js"></script>
+											<h3>Digital Data Collection Tools</h3>
+											<p> The Action Mapping Project centers youth voices. Moving in to a period heavy in virtual engagement I created a digital data collection tool for youth participating in the project. </p>
+											<ul class="actions">
+												<li><a href="AMP.html" class="button">More</a></li>
+											</ul>
+										</article>
+
+										<article>
+											<iframe src="https://uwt-gis-geotech.maps.arcgis.com/apps/webappviewer/index.html?id=85c97465b5b94fa6bcf2ac176ac61eee"  width="100%" height="300"></iframe>
+											<h3>Digital Data Collection Tools</h3>
+											<p> The Action Mapping Project centers youth voices. Moving in to a period heavy in virtual engagement I created a digital data collection tool for youth participating in the project. </p>
+											<ul class="actions">
+												<li><a href="AMP.html" class="button">More</a></li>
+											</ul>
+										</article>
+
+										<article>
+											<a href="AMP.html" class="image"><img src="images/AMPlify.jpg" alt="" /></a>
+											<h3>Digital Data Collection Tools</h3>
+											<p> The Action Mapping Project centers youth voices. Moving in to a period heavy in virtual engagement I created a digital data collection tool for youth participating in the project. </p>
+											<ul class="actions">
+												<li><a href="AMP.html" class="button">More</a></li>
+											</ul>
+										</article>
+
+
+									</div>
+								</section>
+						</div>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
