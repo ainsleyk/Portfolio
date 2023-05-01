@@ -99,11 +99,11 @@ map.addLayer({
     ["linear"],
     ["get", "mag"],
     1, "rgba(33,102,172,0)",
-    2, "#E7D3FC",
-    3, "#6A0DC4",
-    4, "#B871FF",
-    5, "#9D38FF",
-    6, "#6A0DC4"
+    2, "#f0e6f9",
+    3, "#b486e1",
+    4, "#873dcf",
+    5, "#6a0dc4",
+    6, "#4a0989"
 ],
 "circle-stroke-color": "white",
 "circle-stroke-width": 1,
