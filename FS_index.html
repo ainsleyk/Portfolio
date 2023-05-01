@@ -15,6 +15,14 @@
 		<link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.5.0/mapbox-gl.css' rel='stylesheet' />
 		<link href="Leaflet\leaflet.css" rel="stylesheet" />
 		<style>
+        #ocp {
+          height: 75vh;
+          width: 100%;
+          margin-left: auto;
+          margin-right: auto;
+          border: solid;
+          border-color: white;}
+
 					#map {
 						height: 75vh;
 						width: 100%;
@@ -39,7 +47,7 @@
 					margin-left: auto;
 					margin-right: auto;
 					border: solid;
-					border-color: #145556;
+					border-color: white;
 				}
 
 				#holc {
@@ -48,7 +56,7 @@
 					margin-left: auto;
 					margin-right: auto;
 					border: solid;
-					border-color: #145556;
+					border-color: white;
 				}
 
 				#buyout {
@@ -57,7 +65,7 @@
 					margin-left: auto;
 					margin-right: auto;
 					border: solid;
-					border-color: #145556;
+					border-color: white;
 				}
 
 		.leaflet-control-layers-expanded {
@@ -201,7 +209,8 @@
 										</div>
 
 											<div class="col-6 col-12-small">
-											<iframe src="https://uwt-gis-geotech.maps.arcgis.com/apps/webappviewer/index.html?id=85c97465b5b94fa6bcf2ac176ac61eee" title="South Sound Non-Profits" width="100%" height="76%" style="border:3px solid white;" ></iframe>
+                      <div id="ocp">
+											<iframe src="https://uwt-gis-geotech.maps.arcgis.com/apps/webappviewer/index.html?id=85c97465b5b94fa6bcf2ac176ac61eee" title="South Sound Non-Profits" width="100%" height="100%"></iframe></div>
 											<h3>Non-Profits</h3>
 											<p>Registered Non-Profits through Pierce and King Counties. Developed for The Office of Community Partnerships at UW Tacoma.</p>
 										</div>
