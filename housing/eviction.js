@@ -6,7 +6,7 @@ L.tileLayer('https://api.mapbox.com/styles/v1/ainsleykm/ckb15sz0j1evp1inz544l19m
 }).addTo(sf);
 
 
-  $.getJSON("housing/Json/B_HOLC_Count.json",function(data){
+  $.getJSON("B_HOLC_Count.json",function(data){
     var ablock =  L.geoJson(data,{
           style: function(feature){
       var fillColor,
@@ -18,12 +18,12 @@ L.tileLayer('https://api.mapbox.com/styles/v1/ainsleykm/ckb15sz0j1evp1inz544l19m
       return { color: "#5e5b53", weight: .5, fillColor:fillColor, fillOpacity: .6};
     },
     onEachFeature: function (feature,layer){
-      layer.bindPopup('<b>' + "HOLC Grade: " + '</b>' +  "Best" + '</br>' + '<b>' + "Number of Eviction Notices: " + '</b>' +  feature.properties.Join_Count)
+      layer.bindPopup('<b>' + "HOLC Grade: " + '</b>' +  "Still Desirable" + '</br>' + '<b>' + "Number of Eviction Notices: " + '</b>' +  feature.properties.Join_Count)
     }
   }).addTo(holc);
   });
 
-  $.getJSON("housing/Json/A_HOLC_Count.json",function(data){
+  $.getJSON("A_HOLC_Count.json",function(data){
     var ablock =  L.geoJson(data,{
           style: function(feature){
       var fillColor,
@@ -35,12 +35,12 @@ L.tileLayer('https://api.mapbox.com/styles/v1/ainsleykm/ckb15sz0j1evp1inz544l19m
       return { color: "#5e5b53", weight: .5, fillColor:fillColor, fillOpacity: .60};
     },
     onEachFeature: function (feature,layer){
-      layer.bindPopup('<b>' + "HOLC Grade: " + '</b>' +  "Still Desirable" + '</br>' + '<b>' + "Number of Eviction Notices: " + '</b>' +  feature.properties.Join_Count)
+      layer.bindPopup('<b>' + "HOLC Grade: " + '</b>' +  "Best" + '</br>' + '<b>' + "Number of Eviction Notices: " + '</b>' +  feature.properties.Join_Count)
     }
   }).addTo(holc);
   });
 
-  $.getJSON("housing/Json/C_HOLC_Count.json",function(data){
+  $.getJSON("C_HOLC_Count.json",function(data){
     var ablock =  L.geoJson(data,{
           style: function(feature){
       var fillColor,
@@ -57,7 +57,7 @@ L.tileLayer('https://api.mapbox.com/styles/v1/ainsleykm/ckb15sz0j1evp1inz544l19m
   }).addTo(holc);
   });
 
-  $.getJSON("housing/Json/D_HOLC_Count.json",function(data){
+  $.getJSON("D_HOLC_Count.json",function(data){
     var ablock =  L.geoJson(data,{
           style: function(feature){
       var fillColor,
