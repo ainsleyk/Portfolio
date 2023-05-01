@@ -8,6 +8,7 @@ var map = new mapboxgl.Map({
 });
 
 map.on('load', function(){
+map.resize() 
 map.addSource('earthquakes', {
   "type": "geojson",
   "data": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_month.geojson"
