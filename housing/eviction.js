@@ -1,9 +1,9 @@
-var sf = L.map('sf').setView([37.758, -122.433], 13);
+var holc = L.map('holc').setView([37.758, -122.433], 13);
 
 L.tileLayer('https://api.mapbox.com/styles/v1/ainsleykm/ckb15sz0j1evp1inz544l19m0/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiYWluc2xleWttIiwiYSI6ImNrMmt1cDhnaTAwZDgzY2xrcW1zamIxNGgifQ.-0f1V1moN7hnx8mzPD7hxQ', {
   attribution: 'Map data &copy; <a href="https://www.mapbox.com/">Mapbox</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>',
       minZoom: 12,
-}).addTo(sf);
+}).addTo(holc);
 
 
   $.getJSON("B_HOLC_Count.json",function(data){
